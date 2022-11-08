@@ -9,6 +9,7 @@ import javax.swing.table.TableCellRenderer;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Collection;
 import java.util.List;
 
 public class TableJButton {
@@ -19,11 +20,12 @@ public class TableJButton {
     private String[][] data = new String[3][3];
     JButton button = new JButton();
     Controller controller =  null;
+    private boolean visible;
 
     public TableJButton() throws Exception {
 
-        setTitle("Model Table with button");
-        setSize(300,150);
+        setTitle();
+        topPanel.setSize(300,150);
         topPanel = new JPanel();
         topPanel.setLayout(new BorderLayout());
         getContentPane().add(topPanel);
@@ -49,7 +51,20 @@ public class TableJButton {
         );
     }
 
-    private void setTitle(String model_table_with_button) {
+    private Collection<JPanel> getContentPane() {
+        return null;
+    }
+    
+
+    private void setTitle() {
+    }
+
+    public void setVisible(boolean visible) {
+        this.visible = visible;
+    }
+
+    public boolean isVisible() {
+        return visible;
     }
 
     class ButtonRenderer extends JButton implements TableCellRenderer
