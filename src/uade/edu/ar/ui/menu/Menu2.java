@@ -6,9 +6,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public abstract class Menu2 extends JFrame implements ActionListener {
+public class Menu2 extends JFrame implements ActionListener {
+    public Menu2(String title){
+
     super(title);
-    abstract setBounds(40,40,600,480);
+    setBounds(40,40,600,480);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     JMenuBar menuBar = new JMenuBar();
     setJMenuBar(menuBar);

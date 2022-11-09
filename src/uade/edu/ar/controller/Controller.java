@@ -72,7 +72,7 @@ public class Controller {
     }
 
     private static String getPathOutModel(String name){
-        String dir = "C:/IOO/";
+        String dir = "D:\\Bautista Bozzer\\Desktop\\Educación\\#UADE\\Segundo Año\\2C2022\\Jue - Paradigma orientado a objetos\\TPs\\TPO-POO-2C-22";
         return  new File(dir+name+".json").getPath();
     }
 
