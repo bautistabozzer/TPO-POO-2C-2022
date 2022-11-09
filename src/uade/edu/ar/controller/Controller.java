@@ -49,6 +49,9 @@ public class Controller {
         if(index != -1){
             modelList.remove(index);
         }
+
+
+
     }
 
     private int getIndex(String id){
