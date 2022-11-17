@@ -1,5 +1,5 @@
 package uade.edu.ar.model;
-import java.Date;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -9,6 +9,8 @@ public class Peticion {
     private Paciente paciente;
 
     private String obraSocial;
+
+    private LocalDate fechaCreacion;
     private LocalDate fechaEntrega;
     private List<Practicas> practicasAsociadas;
     private int cantPracticas;
@@ -22,7 +24,8 @@ public class Peticion {
         this.paciente = paciente;
         this.practicasAsociadas = practicasAsociadas;
         this.cantPracticas = practicasAsociadas.size(); //Este tamaño esta definido por las practicas asociadas.
-        this.fechaEntrega.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
+        this.fechaCreacion = LocalDate.now();
+        this.fechaEntrega= fechaCreacion.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
         this.obraSocial = "NoAsignado";
     }
 

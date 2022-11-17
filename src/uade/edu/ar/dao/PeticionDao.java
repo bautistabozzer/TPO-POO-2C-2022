@@ -1,6 +1,6 @@
 package uade.edu.ar.dao;
 
-import uade.edu.ar.model.Model;
+
 import uade.edu.ar.model.Peticion;
 import uade.edu.ar.util.GenericDAO;
 
