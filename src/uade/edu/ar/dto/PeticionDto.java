@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class PeticionDto {
-    private int peticionIdPeticion;
+    private String peticionIdPeticion;
     private Paciente pacientePeticion;
 
     private String obraSocialPeticion;
@@ -14,11 +14,11 @@ public class PeticionDto {
     private List<Practicas> practicasAsociadasPeticion;
     private int cantPracticasPeticion;
 
-    public PeticionDto(int peticionIdPeticion, Paciente pacientePeticion, List<Practicas> practicasAsociadasPeticon) {
+    public PeticionDto(String peticionIdPeticion, Paciente pacientePeticion, List<Practicas> practicasAsociadasPeticion) {
         this.peticionIdPeticion = peticionIdPeticion;
         this.pacientePeticion = pacientePeticion;
-        this.practicasAsociadasPeticion = practicasAsociadasPeticon;
-        this.cantPracticasPeticion = practicasAsociadasPeticon.size(); //Este tamaño esta definido por las practicas asociadas.
+        this.practicasAsociadasPeticion = practicasAsociadasPeticion;
+        this.cantPracticasPeticion = practicasAsociadasPeticion.size(); //Este tamaño esta definido por las practicas asociadas.
         this.fechaCreacionPeticion = LocalDate.now();
         this.fechaEntregaPeticion= fechaCreacionPeticion.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
         this.obraSocialPeticion = "NoAsignado";
@@ -28,11 +28,11 @@ public class PeticionDto {
         this.cantPracticasPeticion = cantPracticasPeticion;
     }
 
-    public int getPeticionIdPeticion() {
+    public String getPeticionIdPeticion() {
         return peticionIdPeticion;
     }
 
-    public void setPeticionIdPeticion(int peticionIdPeticion) {
+    public void setPeticionIdPeticion(String peticionIdPeticion) {
         this.peticionIdPeticion = peticionIdPeticion;
     }
 
