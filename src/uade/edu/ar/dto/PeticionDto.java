@@ -1,5 +1,7 @@
 package uade.edu.ar.dto;
 
+import uade.edu.ar.model.Paciente;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -11,10 +13,10 @@ public class PeticionDto {
 
     private LocalDate fechaCreacionPeticion;
     private LocalDate fechaEntregaPeticion;
-    private List<Practicas> practicasAsociadasPeticion;
+    private List<String> practicasAsociadasPeticion;
     private int cantPracticasPeticion;
 
-    public PeticionDto(String peticionIdPeticion, Paciente pacientePeticion, List<Practicas> practicasAsociadasPeticion) {
+    public PeticionDto(String peticionIdPeticion, Paciente pacientePeticion, List<String> practicasAsociadasPeticion) {
         this.peticionIdPeticion = peticionIdPeticion;
         this.pacientePeticion = pacientePeticion;
         this.practicasAsociadasPeticion = practicasAsociadasPeticion;
@@ -60,11 +62,11 @@ public class PeticionDto {
         this.fechaEntregaPeticion = fechaEntregaPeticion;
     }
 
-    public List<Practicas> getPracticasAsociadasPeticion() {
+    public List<String> getPracticasAsociadasPeticion() {
         return practicasAsociadasPeticion;
     }
 
-    public void setPracticasAsociadasPeticion(List<Practicas> practicasAsociadasPeticion) {
+    public void setPracticasAsociadasPeticion(List<String> practicasAsociadasPeticion) {
         this.practicasAsociadasPeticion = practicasAsociadasPeticion;
     }
 }
