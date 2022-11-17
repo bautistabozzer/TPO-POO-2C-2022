@@ -12,14 +12,11 @@ public class Peticion {
 
     private LocalDate fechaCreacion;
     private LocalDate fechaEntrega;
-    private List<Practicas> practicasAsociadas;
+    private List<String> practicasAsociadas;
+
     private int cantPracticas;
 
-
-    public Peticion(){
-    }
-
-    public Peticion(String peticionId, Paciente paciente, List<Practicas> practicasAsociadas) {
+    public Peticion(String peticionId, Paciente paciente, List<String> practicasAsociadas) {
         this.peticionId = peticionId;
         this.paciente = paciente;
         this.practicasAsociadas = practicasAsociadas;
@@ -65,11 +62,11 @@ public class Peticion {
         this.fechaEntrega = fechaEntrega;
     }
 
-    public List<Practicas> getPracticasAsociadas() {
+    public List<String> getPracticasAsociadas() {
         return practicasAsociadas;
     }
 
-    public void setPracticasAsociadas(List<Practicas> practicasAsociadas) {
+    public void setPracticasAsociadas(List<String> practicasAsociadas) {
         this.practicasAsociadas = practicasAsociadas;
     }
 
