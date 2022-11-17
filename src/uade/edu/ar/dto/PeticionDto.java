@@ -8,6 +8,8 @@ public class PeticionDto {
     private Paciente pacientePeticion;
 
     private String obraSocialPeticion;
+
+    private LocalDate fechaCreacionPeticion;
     private LocalDate fechaEntregaPeticion;
     private List<Practicas> practicasAsociadasPeticion;
     private int cantPracticasPeticion;
@@ -17,7 +19,8 @@ public class PeticionDto {
         this.pacientePeticion = pacientePeticion;
         this.practicasAsociadasPeticion = practicasAsociadasPeticon;
         this.cantPracticasPeticion = practicasAsociadasPeticon.size(); //Este tamaño esta definido por las practicas asociadas.
-        this.fechaEntregaPeticion.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
+        this.fechaCreacionPeticion = LocalDate.now();
+        this.fechaEntregaPeticion= fechaCreacionPeticion.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
         this.obraSocialPeticion = "NoAsignado";
     }
 
