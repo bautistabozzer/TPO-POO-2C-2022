@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Peticion {
 
-    private int peticionId;
+    private String peticionId;
     private Paciente paciente;
 
     private String obraSocial;
@@ -19,8 +19,8 @@ public class Peticion {
     public Peticion(){
     }
 
-    public Peticion(int peticionId, Paciente paciente, List<Practicas> practicasAsociadas) {
-        this.peticionID = peticionId;
+    public Peticion(String peticionId, Paciente paciente, List<Practicas> practicasAsociadas) {
+        this.peticionId = peticionId;
         this.paciente = paciente;
         this.practicasAsociadas = practicasAsociadas;
         this.cantPracticas = practicasAsociadas.size(); //Este tamaño esta definido por las practicas asociadas.
@@ -33,11 +33,11 @@ public class Peticion {
         return cantPracticas;
     }
 
-    public int getPeticionId() {
+    public String getPeticionId() {
         return peticionId;
     }
 
-    public void setPeticionID(int peticionId) {
+    public void setPeticionID(String peticionId) {
         this.peticionId = peticionId;
     }
 
