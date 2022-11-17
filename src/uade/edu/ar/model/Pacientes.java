@@ -70,8 +70,8 @@ public class Pacientes {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(LocalDate fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public void setFechaNacimiento(int day, int month, int year) {
+        this.fechaNacimiento = LocalDate.of(day, month, year);
     }
 
 
