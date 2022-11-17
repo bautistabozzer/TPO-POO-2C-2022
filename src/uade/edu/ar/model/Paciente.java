@@ -1,8 +1,7 @@
 package uade.edu.ar.model;
 import java.time.LocalDate;
-import javax.print.DocFlavor;
 
-public class Pacientes {
+public class Paciente {
 
     private int dni;
 
@@ -17,7 +16,7 @@ public class Pacientes {
     private LocalDate fechaNacimiento;
 
 
-    public Pacientes(int dni, String nombre, Character sexo, LocalDate fechaNacimiento) {
+    public Paciente(int dni, String nombre, Character sexo, LocalDate fechaNacimiento) {
         this.dni = dni;
         this.nombre = nombre;
         this.sexo = sexo;
@@ -77,8 +76,8 @@ public class Pacientes {
 
     @Override
     public String toString() {
-        return "Pacientes{" +
-                "Pacientes dni='" + dni + '\'' +
+        return "Paciente{" +
+                "Paciente dni='" + dni + '\'' +
                 ", Nombre paciente='" + nombre + '\'' +
                 ", Sexo paciente='" + sexo + '\'' +
                 ", Domicilio='" + domicilio + '\'' +
