@@ -21,7 +21,7 @@ public class ControllerPeticion {
     public static synchronized ControllerPeticion getInstances() throws Exception {
         if(CONTROLLER == null) {
             CONTROLLER = new ControllerPeticion();
-            peticionDao = new PeticionDao(Peticion.class, getPathOutModel(Peticion.class.getSimpleName()));
+            peticionDao = new PeticionDao(Peticion.class, getPathOutPeticion(Peticion.class.getSimpleName()));
             peticionList = peticionDao.getAll(Peticion.class);
         }
         return CONTROLLER;
@@ -68,7 +68,7 @@ public class ControllerPeticion {
         return dtoList;
     }
 
-    private static String getPathOutModel(String name){
+    private static String getPathOutPeticion(String name){
         String dir = "D:\\Bautista Bozzer\\Desktop\\Educación\\#UADE\\Segundo Año\\2C2022\\Jue - Paradigma orientado a objetos\\TPs\\TPO-POO-2C-22";
         return  new File(dir+name+".json").getPath();
     }
@@ -78,6 +78,6 @@ public class ControllerPeticion {
     }
 
     public static PeticionDto toDto(Peticion peticion){
-        return new PeticionDto(peticion.getPeticionId(),peticion.getPaciente(), peticion.getPracticasAsociadas());
+        return new PeticionDto(peticion.getPeticionId(),peticion.getPacienteId(), peticion.getPracticasAsociadas(), peticion.getFechaEntrega(), peticion.getObraSocial(), peticion.getCantPracticas());
     }
 }

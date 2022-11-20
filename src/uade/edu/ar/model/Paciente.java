@@ -3,7 +3,7 @@ import java.time.LocalDate;
 
 public class Paciente {
 
-    private String dni;
+    private static String dni;
 
     private String nombre;
 
