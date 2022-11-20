@@ -6,7 +6,8 @@ import java.util.List;
 public class Peticion {
 
     private String peticionId;
-    private Paciente paciente;
+
+    private String pacienteId;
 
     private String obraSocial;
 
@@ -16,9 +17,9 @@ public class Peticion {
 
     private int cantPracticas;
 
-    public Peticion(String peticionId, Paciente paciente, List<String> practicasAsociadas) {
+    public Peticion(String peticionId, String pacienteId, List<String> practicasAsociadas) {
         this.peticionId = peticionId;
-        this.paciente = paciente;
+        this.pacienteId = pacienteId;
         this.practicasAsociadas = practicasAsociadas;
         this.cantPracticas = practicasAsociadas.size(); //Este tamaño esta definido por las practicas asociadas.
         this.fechaCreacion = LocalDate.now();
@@ -39,12 +40,12 @@ public class Peticion {
         this.peticionId = peticionId;
     }
 
-    public Paciente getPaciente() {
-        return paciente;
+    public String getPacienteId() {
+        return pacienteId;
     }
 
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
+    public void setPacienteId(String pacienteId) {
+        this.pacienteId = pacienteId;
     }
 
     public String getObraSocial() {
@@ -75,10 +76,10 @@ public class Peticion {
     public String toString() {
         return "Peticion{" +
                 "Peticion Id='" + peticionId + '\'' +
-                ", Paciente='" + paciente + '\'' +
+                ", Paciente='" + pacienteId + '\'' +
                 ", Obra social='" + obraSocial + '\'' +
                 ", Fecha entrega='" + fechaEntrega + '\'' +
-                ", Practicas Asociadas='" +  + '\'' +
+                ", Practicas Asociadas='" + practicasAsociadas + '\'' +
                 ", Cantidad de practicas='" + cantPracticas + '\'' +
                 '}';
     }

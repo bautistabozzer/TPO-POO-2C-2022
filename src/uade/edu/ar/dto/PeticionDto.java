@@ -7,7 +7,8 @@ import java.util.List;
 
 public class PeticionDto {
     private String peticionIdPeticion;
-    private Paciente pacientePeticion;
+
+    private String pacienteIdPeticion;
 
     private String obraSocialPeticion;
 
@@ -16,9 +17,9 @@ public class PeticionDto {
     private List<String> practicasAsociadasPeticion;
     private int cantPracticasPeticion;
 
-    public PeticionDto(String peticionIdPeticion, Paciente pacientePeticion, List<String> practicasAsociadasPeticion) {
+    public PeticionDto(String peticionIdPeticion, String pacienteIdPeticion, List<String> practicasAsociadasPeticion, LocalDate fechaEntrega, String obraSocial, int cantPracticas) {
         this.peticionIdPeticion = peticionIdPeticion;
-        this.pacientePeticion = pacientePeticion;
+        this.pacienteIdPeticion = pacienteIdPeticion;
         this.practicasAsociadasPeticion = practicasAsociadasPeticion;
         this.cantPracticasPeticion = practicasAsociadasPeticion.size(); //Este tamaño esta definido por las practicas asociadas.
         this.fechaCreacionPeticion = LocalDate.now();
@@ -38,12 +39,12 @@ public class PeticionDto {
         this.peticionIdPeticion = peticionIdPeticion;
     }
 
-    public Paciente getPacientePeticion() {
-        return pacientePeticion;
+    public String getPacientePeticion() {
+        return pacienteIdPeticion;
     }
 
-    public void setPacientePeticion(Paciente pacientePeticion) {
-        this.pacientePeticion = pacientePeticion;
+    public void setPacientePeticion(String pacienteIdPeticion) {
+        this.pacienteIdPeticion = pacienteIdPeticion;
     }
 
     public String getObraSocialPeticion() {
@@ -68,5 +69,9 @@ public class PeticionDto {
 
     public void setPracticasAsociadasPeticion(List<String> practicasAsociadasPeticion) {
         this.practicasAsociadasPeticion = practicasAsociadasPeticion;
+    }
+
+    public int getCantPracticasPeticion() {
+        return cantPracticasPeticion;
     }
 }
