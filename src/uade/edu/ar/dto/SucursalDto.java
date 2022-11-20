@@ -2,26 +2,26 @@ package uade.edu.ar.dto;
 
 public class SucursalDto {
 
-    private String SucursalIdSucursal;
+    private String sucursalIdSucursal;
 
     private String direccionSucursal;
 
-    private String ResponsableTecnicoSucursal;
+    private String responsableTecnicoSucursal;
 
 
     public SucursalDto(String sucursalIdSucursal, String direccionSucursal, String responsableTecnicoSucursal) {
-        this.SucursalIdSucursal = sucursalIdSucursal;
+        this.sucursalIdSucursal = sucursalIdSucursal;
         this.direccionSucursal = direccionSucursal;
-        this.ResponsableTecnicoSucursal = responsableTecnicoSucursal;
+        this.responsableTecnicoSucursal = responsableTecnicoSucursal;
     }
 
 
-    public String getSucursalIdSucursal() {
-        return SucursalIdSucursal;
+    public String getsucursalIdSucursal() {
+        return sucursalIdSucursal;
     }
 
     public void setSucursalIdSucursal(String sucursalIdSucursal) {
-        SucursalIdSucursal = sucursalIdSucursal;
+        this.sucursalIdSucursal = sucursalIdSucursal;
     }
 
     public String getDireccionSucursal() {
@@ -33,10 +33,10 @@ public class SucursalDto {
     }
 
     public String getResponsableTecnicoSucursal() {
-        return ResponsableTecnicoSucursal;
+        return responsableTecnicoSucursal;
     }
 
     public void setResponsableTecnicoSucursal(String responsableTecnicoSucursal) {
-        ResponsableTecnicoSucursal = responsableTecnicoSucursal;
+        this.responsableTecnicoSucursal = responsableTecnicoSucursal;
     }
 }

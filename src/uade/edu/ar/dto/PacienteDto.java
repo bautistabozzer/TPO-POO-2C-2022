@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class PacienteDto {
 
-    private int dniPaciente;
+    private String dniPaciente;
 
     private String nombrePaciente;
 
@@ -17,7 +17,7 @@ public class PacienteDto {
     private String emailPaciente;
 
 
-    public PacienteDto(int dniPaciente, String nombrePaciente, String domicilioPaciente, String emailPaciente, Character sexoPaciente, LocalDate fechaNacimientoPaciente) {
+    public PacienteDto(String dniPaciente, String nombrePaciente, String domicilioPaciente, String emailPaciente, Character sexoPaciente, LocalDate fechaNacimientoPaciente) {
         this.dniPaciente = dniPaciente;
         this.nombrePaciente = nombrePaciente;
         this.sexoPaciente = sexoPaciente;
@@ -28,11 +28,11 @@ public class PacienteDto {
     }
 
 
-    public int getDniPaciente() {
+    public String getDniPaciente() {
         return dniPaciente;
     }
 
-    public void setDniPaciente(int dniPaciente) {
+    public void setDniPaciente(String dniPaciente) {
         this.dniPaciente = dniPaciente;
     }
 
