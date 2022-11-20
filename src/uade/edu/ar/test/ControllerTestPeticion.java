@@ -4,13 +4,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import uade.edu.ar.controller.ControllerPeticion;
 import uade.edu.ar.dto.PeticionDto;
-import uade.edu.ar.model.Model;
-import uade.edu.ar.model.Paciente;
 import uade.edu.ar.model.Peticion;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;

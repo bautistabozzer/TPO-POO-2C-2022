@@ -2,26 +2,26 @@ package uade.edu.ar.model;
 
 public class Sucursal {
 
-private String SucursalId;
+private String sucursalId;
 
 private String direccion;
 
-private String ResponsableTecnico;
+private String responsableTecnico;
 
 
     public Sucursal(String sucursalId, String direccion, String responsableTecnico) {
-        this.SucursalId = sucursalId;
+        this.sucursalId = sucursalId;
         this.direccion = direccion;
-        this.ResponsableTecnico = responsableTecnico;
+        this.responsableTecnico = responsableTecnico;
     }
 
 
     public String getSucursalId() {
-        return SucursalId;
+        return sucursalId;
     }
 
     public void setSucursalId(String sucursalId) {
-        SucursalId = sucursalId;
+        this.sucursalId = sucursalId;
     }
 
     public String getDireccion() {
@@ -33,18 +33,18 @@ private String ResponsableTecnico;
     }
 
     public String getResponsableTecnico() {
-        return ResponsableTecnico;
+        return responsableTecnico;
     }
 
     public void setResponsableTecnico(String responsableTecnico) {
-        ResponsableTecnico = responsableTecnico;
+        this.responsableTecnico = responsableTecnico;
     }
 
     public String toString() {
         return "Sucursal{" +
-                "Sucursal Id='" + SucursalId + '\'' +
+                "Sucursal Id='" + sucursalId + '\'' +
                 ", Direccion='" + direccion + '\'' +
-                ", Responsable Tecnico='" + ResponsableTecnico + '\'' +
+                ", Responsable Tecnico='" + responsableTecnico + '\'' +
                 '}';
     }
 
