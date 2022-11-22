@@ -32,8 +32,9 @@ public class ControllerTestPeticion {
         practicasAsociadas.add("Hemograma");
         practicasAsociadas.add("Analisis de orina");
         //practicasAsociadas.toArray();
-        Peticion peticion = new Peticion("165474874651", pacienteId, practicasAsociadas);
-        controllerPeticion.addPeticion(ControllerPeticion.toDto(peticion));
+
+        Peticion peticion = new Peticion("165474874651", pacienteId, practicasAsociadas );
+        controllerPeticion.addPeticion(controllerPeticion.toDto(peticion));
     }
 
     @Test
@@ -48,6 +49,7 @@ public class ControllerTestPeticion {
     }
 
     @Test
-    void deleteBypeticionIdPeticion() {
+    void deleteBypeticionIdPeticion(String pacienteId) {
+
     }
 }

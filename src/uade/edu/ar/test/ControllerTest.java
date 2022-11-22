@@ -5,8 +5,11 @@ import org.junit.jupiter.api.Test;
 import uade.edu.ar.controller.Controller;
 import uade.edu.ar.dto.ModelDto;
 import uade.edu.ar.model.Model;
+
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class ControllerTest {
 

@@ -1,6 +1,7 @@
 package uade.edu.ar.ui.table;
 
 import uade.edu.ar.dto.ModelDto;
+
 import javax.swing.table.AbstractTableModel;
 import java.util.List;
 

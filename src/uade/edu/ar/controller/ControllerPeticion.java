@@ -3,6 +3,7 @@ package uade.edu.ar.controller;
 import uade.edu.ar.dao.PeticionDao;
 import uade.edu.ar.dto.PeticionDto;
 import uade.edu.ar.model.Peticion;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +30,7 @@ public class ControllerPeticion {
 
 
     public void addPeticion(PeticionDto dto) throws Exception {
-        if(getBypeticionIdPeticion(String.valueOf(dto.getPeticionIdPeticion())) == null){
+        if(getBypeticionIdPeticion(dto.getPeticionIdPeticion()) == null){
             peticionDao.save(toPeticion(dto));
         }
     }
@@ -78,6 +79,6 @@ public class ControllerPeticion {
     }
 
     public static PeticionDto toDto(Peticion peticion){
-        return new PeticionDto(peticion.getPeticionId(),peticion.getPacienteId(), peticion.getPracticasAsociadas(), peticion.getFechaEntrega(), peticion.getObraSocial(), peticion.getCantPracticas());
+        return new PeticionDto(peticion.getPeticionId(),peticion.getPacienteId(), peticion.getPracticasAsociadas());
     }
 }

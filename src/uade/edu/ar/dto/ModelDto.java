@@ -1,8 +1,5 @@
 package uade.edu.ar.dto;
 
-import uade.edu.ar.model.Model;
-
-
 public class ModelDto {
     private String idModel;
 
