@@ -12,7 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
-public class TablePacientes extends JFrame implements ActionListener {
+public class TablePacientes extends JInternalFrame implements ActionListener {
     private Object[][] data;
     private String[] columnNames = {"Dni","Nombre", "Domicilio", "Email", "Sexo", "Fecha de naciemiento"};
     private DefaultTableModel tablePaciente;
@@ -21,7 +21,9 @@ public class TablePacientes extends JFrame implements ActionListener {
 
     public TablePacientes(String title) throws Exception {
         super(title);
-        setBounds(10,10,400,300);
+        setBorder(null);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         controllerPaciente = ControllerPaciente.getInstances();
         data = convertDtoToData(controllerPaciente.getAll());
@@ -29,7 +31,7 @@ public class TablePacientes extends JFrame implements ActionListener {
         table = new JTable(tablePaciente);
         table.setAutoCreateRowSorter(true);
         JScrollPane scrollPane = new JScrollPane(table);
-        scrollPane.setPreferredSize(new Dimension(380,280));
+        scrollPane.setPreferredSize(new Dimension(380, 380));
         JPanel panel = new JPanel();
         panel.add(scrollPane);
         add(panel,BorderLayout.CENTER);
@@ -52,9 +54,11 @@ public class TablePacientes extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
 
     }
-    public static void main(String[] args) throws Exception {
+    public void main(String[] args) throws Exception {
         TablePacientes myApp = new TablePacientes("Table Paciente");
         myApp.setVisible(true);
+        ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
+        setContentPane(myApp);
     }
 }
 
