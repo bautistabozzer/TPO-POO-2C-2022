@@ -31,7 +31,7 @@ public class TablePacientes extends JInternalFrame implements ActionListener {
         table = new JTable(tablePaciente);
         table.setAutoCreateRowSorter(true);
         JScrollPane scrollPane = new JScrollPane(table);
-        scrollPane.setPreferredSize(new Dimension(380, 380));
+        scrollPane.setPreferredSize(new Dimension(600, 600));
         JPanel panel = new JPanel();
         panel.add(scrollPane);
         add(panel,BorderLayout.CENTER);
