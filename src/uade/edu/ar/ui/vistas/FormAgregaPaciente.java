@@ -24,6 +24,7 @@ public class FormAgregaPaciente extends JInternalFrame{
 
         super("paciente");
         setBorder(null);
+
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
 
         setContentPane(panelPrincipalPaciente);
@@ -37,7 +38,7 @@ public class FormAgregaPaciente extends JInternalFrame{
                 } catch (Exception ex) {
                     throw new RuntimeException(ex);
                 }
-                PacienteDto pacienteDto= new PacienteDto(dni.getText(),nombre.getText(), domicilio.getText(), email.getText(), sexo.getText(), fechaNacimiento.getText());
+                PacienteDto pacienteDto= new PacienteDto(dni.getText(),nombre.getText(), domicilio.getText(), email.getText(), 'M', fechaNacimiento.getText());
                 try {
                     controllerPaciente.addPaciente(pacienteDto);
                 } catch (Exception ex) {
