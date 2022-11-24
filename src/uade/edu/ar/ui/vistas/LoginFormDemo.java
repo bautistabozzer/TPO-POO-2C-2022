@@ -1,5 +1,6 @@
-package uade.edu.ar.ui;
+package uade.edu.ar.ui.vistas;
 //import required classes and packages
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;

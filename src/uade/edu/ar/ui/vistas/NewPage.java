@@ -1,4 +1,4 @@
-package uade.edu.ar.ui;
+package uade.edu.ar.ui.vistas;
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.*;
