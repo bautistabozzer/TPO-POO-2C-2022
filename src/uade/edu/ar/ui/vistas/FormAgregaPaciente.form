@@ -53,11 +53,13 @@
                       <text value="Fecha nacimiento"/>
                     </properties>
                   </component>
-                  <component id="53c12" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+                  <component id="53c12" class="javax.swing.JTextField" binding="fechaNacimiento">
                     <constraints>
                       <splitpane position="right"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
                   </component>
                 </children>
               </splitpane>
@@ -88,11 +90,13 @@
                       <text value="Mail"/>
                     </properties>
                   </component>
-                  <component id="42521" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+                  <component id="42521" class="javax.swing.JTextField" binding="email">
                     <constraints>
                       <splitpane position="right"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
                   </component>
                 </children>
               </splitpane>
@@ -123,11 +127,13 @@
                       <text value="Domicilio"/>
                     </properties>
                   </component>
-                  <component id="24ce8" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+                  <component id="24ce8" class="javax.swing.JTextField" binding="domicilio">
                     <constraints>
                       <splitpane position="right"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
                   </component>
                 </children>
               </splitpane>
@@ -158,11 +164,13 @@
                       <text value="Sexo"/>
                     </properties>
                   </component>
-                  <component id="43e63" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+                  <component id="43e63" class="javax.swing.JTextField" binding="sexo">
                     <constraints>
                       <splitpane position="right"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
                   </component>
                 </children>
               </splitpane>
@@ -193,11 +201,13 @@
                       <text value="Nombre"/>
                     </properties>
                   </component>
-                  <component id="38290" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+                  <component id="38290" class="javax.swing.JTextField" binding="nombre">
                     <constraints>
                       <splitpane position="right"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
                   </component>
                 </children>
               </splitpane>
@@ -228,11 +238,13 @@
                       <text value="Dni"/>
                     </properties>
                   </component>
-                  <component id="4a16d" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+                  <component id="4a16d" class="javax.swing.JTextField" binding="dni">
                     <constraints>
                       <splitpane position="right"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
                   </component>
                 </children>
               </splitpane>
