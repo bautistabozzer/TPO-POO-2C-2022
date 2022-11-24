@@ -81,7 +81,7 @@ class CreateLoginForm extends JFrame implements ActionListener
 }
     //crear la clase principal
 public class LoginFormDemo {
-    //nicio del método main()
+    //inicio del método main()
     public static void main(String arg[])
     {
         try
