@@ -28,13 +28,13 @@ public class ControllerTestPeticion {
 
     @Test
     void addPeticion() throws Exception {
-        String pacienteId= "56.489.752";
+        String pacienteId= "12.321.147";
         List<String> practicasAsociadas= new ArrayList<>();
         practicasAsociadas.add("Hemograma");
         practicasAsociadas.add("Analisis de orina");
         //practicasAsociadas.toArray();
 
-        Peticion peticion = new Peticion("15789227", pacienteId, practicasAsociadas );
+        Peticion peticion = new Peticion("1471749", pacienteId, practicasAsociadas );
         controllerPeticion.addPeticion(controllerPeticion.toDto(peticion));
     }
 
@@ -50,7 +50,7 @@ public class ControllerTestPeticion {
     }
 
     @Test
-    void deleteBypeticionIdPeticion() {
-        controllerPeticion.deleteBypeticionIdPeticion("123456");
+    void deleteBypeticionIdPeticion() throws Exception {
+        controllerPeticion.deleteBypeticionIdPeticion("147489");
     }
 }

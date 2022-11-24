@@ -1,5 +1,6 @@
 package uade.edu.ar.controller;
 
+import org.junit.jupiter.api.Test;
 import uade.edu.ar.dao.PeticionDao;
 import uade.edu.ar.dto.PeticionDto;
 import uade.edu.ar.model.Peticion;
@@ -7,6 +8,7 @@ import uade.edu.ar.model.Peticion;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 
 public class ControllerPeticion {
@@ -45,16 +47,17 @@ public class ControllerPeticion {
     }
 
 
-    public void deleteBypeticionIdPeticion(String peticionId){
+    public void deleteBypeticionIdPeticion(String peticionId) throws Exception {
         int index = getIndex(peticionId);
-        if(index != -1){
+        if(index != -1) {
             peticionList.remove(index);
+           // peticionDao.update(toPeticion());
         }
     }
 
     private int getIndex(String peticionId){
-        for (int i=0;i<peticionList.size();i++){
-            if(peticionList.get(i).getPeticionId().equals(peticionId)){
+        for (int i=0;i<=peticionList.size();i++){
+            if(Objects.equals(peticionList.get(i).getPeticionId(), peticionId)){
                 return i;
             }
         }
@@ -70,7 +73,7 @@ public class ControllerPeticion {
     }
 
     private static String getPathOutPeticion(String name){
-        String dir = "E:\\UADE\\Segundo cuatrimestre 2022\\Paradigma orientado a objetos\\Trabajo practico";
+        String dir = "D:\\Bautista Bozzer\\Desktop\\Educación\\#UADE\\Segundo Año\\2C2022\\Jue - Paradigma orientado a objetos\\TPs\\";
         return  new File(dir+name+".json").getPath();
     }
 
