@@ -21,7 +21,7 @@ public class PeticionDto {
         this.practicasAsociadasPeticion = practicasAsociadasPeticion;
         this.cantPracticasPeticion = practicasAsociadasPeticion.size(); //Este tamaño esta definido por las practicas asociadas.
         this.fechaCreacionPeticion = LocalDate.now();
-        this.fechaEntregaPeticion= fechaCreacionPeticion.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
+        this.fechaEntregaPeticion= setFechaEntregaPeticion(fechaCreacionPeticion);
         this.obraSocialPeticion = "NoAsignado";
     }
 
@@ -57,8 +57,8 @@ public class PeticionDto {
         return fechaEntregaPeticion;
     }
 
-    public void setFechaEntregaPeticion(LocalDate fechaEntregaPeticion) {
-        this.fechaEntregaPeticion = fechaEntregaPeticion;
+    public LocalDate setFechaEntregaPeticion(LocalDate fechaCreacionPeticion) {
+        return fechaEntregaPeticion = fechaCreacionPeticion.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
     }
 
     public List<String> getPracticasAsociadasPeticion() {
