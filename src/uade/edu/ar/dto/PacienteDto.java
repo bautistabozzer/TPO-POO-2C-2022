@@ -1,6 +1,7 @@
 package uade.edu.ar.dto;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class PacienteDto {
 
@@ -12,17 +13,17 @@ public class PacienteDto {
 
     private String domicilioPaciente;
 
-    private LocalDate fechaNacimientoPaciente;
+    private String fechaNacimientoPaciente;
 
     private String emailPaciente;
 
 
-    public PacienteDto(String dniPaciente, String nombrePaciente, String domicilioPaciente, String emailPaciente, Character sexoPaciente, LocalDate fechaNacimientoPaciente) {
+    public PacienteDto(String dniPaciente, String nombrePaciente, String domicilioPaciente, String emailPaciente, Character sexoPaciente, String fechaNacimiento) {
         this.dniPaciente = dniPaciente;
         this.nombrePaciente = nombrePaciente;
         this.sexoPaciente = sexoPaciente;
         this.domicilioPaciente = "NOAsignado";
-        this.fechaNacimientoPaciente = LocalDate.of(2003, 10, 10);
+        this.fechaNacimientoPaciente = fechaNacimiento;
         this.emailPaciente ="NOAsignado";
 
     }
@@ -60,12 +61,13 @@ public class PacienteDto {
         this.domicilioPaciente = domicilioPaciente;
     }
 
-    public LocalDate getFechaNacimientoPaciente() {
+    public String getFechaNacimientoPaciente() {
         return fechaNacimientoPaciente;
     }
 
-    public void setFechaNacimientoPaciente(LocalDate fechaNacimientoPaciente) {
-        this.fechaNacimientoPaciente = fechaNacimientoPaciente;
+    public void setFechaNacimientoPaciente(int dia, int mes, int anio) {
+        this.fechaNacimientoPaciente = LocalDate.of(dia, mes, anio).format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+
     }
 
     public String getEmailPaciente() {

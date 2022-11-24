@@ -59,9 +59,8 @@ public class PeticionDto {
     }
 
     public String setFechaEntregaPeticion() {
-        LocalDate fechaCreacionPeticion = LocalDate.now();
-        fechaCreacionPeticion.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
-        String fechaEntregaPeticion= fechaCreacionPeticion.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        LocalDate fechaCreacionPeticion = LocalDate.now(); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
+        String fechaEntregaPeticion= fechaCreacionPeticion.plusDays(8).format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         return fechaEntregaPeticion;
 
 

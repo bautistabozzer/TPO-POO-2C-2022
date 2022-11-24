@@ -42,7 +42,7 @@ private String responsableTecnico;
 
     public String toString() {
         return "Sucursal{" +
-                "Sucursal Id='" + sucursalId + '\'' +
+                "Id='" + sucursalId + '\'' +
                 ", Direccion='" + direccion + '\'' +
                 ", Responsable Tecnico='" + responsableTecnico + '\'' +
                 '}';

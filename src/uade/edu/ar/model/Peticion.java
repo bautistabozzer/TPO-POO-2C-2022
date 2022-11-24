@@ -62,9 +62,8 @@ public class Peticion {
     }
 
     public String setFechaEntrega() {
-        LocalDate fechaCreacion = LocalDate.now();
-        fechaCreacion.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
-        String fechaEntrega= fechaCreacion.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        LocalDate fechaCreacion = LocalDate.now(); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
+        String fechaEntrega= fechaCreacion.plusDays(8).format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         return fechaEntrega;
     }
 
@@ -80,7 +79,7 @@ public class Peticion {
     @Override
     public String toString() {
         return "Peticion{" +
-                "Peticion Id='" + peticionId + '\'' +
+                "Id='" + peticionId + '\'' +
                 ", Paciente='" + pacienteId + '\'' +
                 ", Obra social='" + obraSocial + '\'' +
                 ", Fecha entrega='" + fechaEntrega + '\'' +
