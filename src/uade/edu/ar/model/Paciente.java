@@ -1,9 +1,10 @@
 package uade.edu.ar.model;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Paciente {
 
-    private static String dni;
+    private String dni;
 
     private String nombre;
 
@@ -13,15 +14,15 @@ public class Paciente {
 
     private Character sexo;
 
-    private LocalDate fechaNacimiento;
+    private String fechaNacimiento;
 
 
-    public Paciente(String dni, String nombre, Character sexo, LocalDate fechaNacimiento) {
+    public Paciente(String dni, String nombre, Character sexo) {
         this.dni = dni;
         this.nombre = nombre;
         this.sexo = sexo;
         this.domicilio = "NOAsignado";
-        this.fechaNacimiento = LocalDate.of(2003, 10, 10);
+        this.fechaNacimiento = "NoAsignado";
         this.email = "NOAsignado";
     }
 
@@ -65,19 +66,19 @@ public class Paciente {
         this.sexo = sexo;
     }
 
-    public LocalDate getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(int day, int month, int year) {
-        this.fechaNacimiento = LocalDate.of(day, month, year);
+    public void setFechaNacimiento(int dia, int mes, int anio) {
+        this.fechaNacimiento = LocalDate.of(dia, mes, anio).format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));;
     }
 
 
     @Override
     public String toString() {
         return "Paciente{" +
-                "Paciente dni='" + dni + '\'' +
+                "Id='" + dni + '\'' +
                 ", Nombre paciente='" + nombre + '\'' +
                 ", Sexo paciente='" + sexo + '\'' +
                 ", Domicilio='" + domicilio + '\'' +

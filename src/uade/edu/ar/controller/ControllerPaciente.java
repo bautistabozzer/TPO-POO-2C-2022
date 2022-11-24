@@ -7,6 +7,7 @@ import uade.edu.ar.model.Paciente;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ControllerPaciente {
     private static ControllerPaciente CONTROLLER = null;
@@ -36,7 +37,7 @@ public class ControllerPaciente {
 
     public PacienteDto getBydniPaciente(String dni) throws Exception {
         for (Paciente paciente: pacienteList) {
-            if (paciente.getDni().equals(dni)){
+            if (Objects.equals(paciente.getDni(), dni)){
                 return toDto(paciente);
             }
         }
@@ -53,7 +54,7 @@ public class ControllerPaciente {
 
     private int getIndex(String dni){
         for (int i=0;i<pacienteList.size();i++){
-            if(pacienteList.get(i).getDni().equals(dni)){
+            if(Objects.equals(pacienteList.get(i).getDni(), dni)){
                 return i;
             }
         }
@@ -74,7 +75,7 @@ public class ControllerPaciente {
     }
 
     public static Paciente toPaciente(PacienteDto dto){
-        return new Paciente(dto.getDniPaciente(), dto.getNombrePaciente(), dto.getSexoPaciente(), dto.getFechaNacimientoPaciente());
+        return new Paciente(dto.getDniPaciente(), dto.getNombrePaciente(), dto.getSexoPaciente());
     }
 
     public static PacienteDto toDto(Paciente paciente){

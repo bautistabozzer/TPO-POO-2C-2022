@@ -34,7 +34,7 @@ public class ControllerTestPeticion {
         practicasAsociadas.add("Analisis de orina");
         //practicasAsociadas.toArray();
 
-        Peticion peticion = new Peticion("123456", pacienteId, practicasAsociadas );
+        Peticion peticion = new Peticion("15789227", pacienteId, practicasAsociadas );
         controllerPeticion.addPeticion(controllerPeticion.toDto(peticion));
     }
 
@@ -51,5 +51,6 @@ public class ControllerTestPeticion {
 
     @Test
     void deleteBypeticionIdPeticion() {
+        controllerPeticion.deleteBypeticionIdPeticion("123456");
     }
 }
