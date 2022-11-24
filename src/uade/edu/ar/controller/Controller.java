@@ -50,14 +50,6 @@ public class Controller {
             modelList.remove(index);
         }
 
-
-
-
-
-
-
-
-
     }
 
     private int getIndex(String id){
