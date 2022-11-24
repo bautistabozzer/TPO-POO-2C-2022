@@ -1,5 +1,7 @@
 package uade.edu.ar.ui.vistas;
 
+import uade.edu.ar.ui.table.TablePacientes;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -34,9 +36,15 @@ public class MenuLogin extends JFrame {
         verDatosButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FormVerDatosPaciente pantalla = new FormVerDatosPaciente();
+                TablePacientes pantalla = null;
+                try {
+                    pantalla = new TablePacientes("Pacientes");
+                } catch (Exception ex) {
+                    throw new RuntimeException(ex);
+                }
                 desktopPaneEmbebido.add(pantalla);
                 pantalla.setVisible(true);
+
             }
         });
     }
