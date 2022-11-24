@@ -34,8 +34,8 @@ public class ControllerTestPaciente {
     @Test
     void addPaciente() throws Exception {
 
-        Paciente paciente= new Paciente("789456312", "Juana", 'F');
-        //paciente.setFechaNacimiento(4,7,7);
+        Paciente paciente= new Paciente("1498743", "Adrian", 'M');
+        //paciente.setFechaNacimiento(9,7,7);
         controllerPaciente.addPaciente(controllerPaciente.toDto(paciente));
 
     }
