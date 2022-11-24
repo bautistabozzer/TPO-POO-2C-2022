@@ -1,12 +1,17 @@
 package uade.edu.ar.ui.vistas;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MenuLogin extends JFrame {
 
     private JPanel panelPrincipal;
     private JPanel botonera;
     private JPanel panelcentralizado;
+    private JButton agregarPacienteButton;
+    private JButton verDatosButton;
+    private JDesktopPane desktopPaneEmbebido;
 
     public MenuLogin()
     {
@@ -16,6 +21,24 @@ public class MenuLogin extends JFrame {
         setLocationRelativeTo(null);
         setContentPane(panelPrincipal);
 
+        //esto hace que cuando toque agregar paciente, lo agregue
+        agregarPacienteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FormAgregaPaciente pantalla = new FormAgregaPaciente();
+                desktopPaneEmbebido.add(pantalla);
+                pantalla.setVisible(true);
+
+            }
+        });
+        verDatosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FormVerDatosPaciente pantalla = new FormVerDatosPaciente();
+                desktopPaneEmbebido.add(pantalla);
+                pantalla.setVisible(true);
+            }
+        });
     }
 
 
@@ -28,5 +51,7 @@ public class MenuLogin extends JFrame {
     }
 
 
-
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }
