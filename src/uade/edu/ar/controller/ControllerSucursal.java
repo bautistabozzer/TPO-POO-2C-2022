@@ -69,7 +69,7 @@ public class ControllerSucursal {
     }
 
     private static String getPathOutSucursal(String name){
-        String dir = "D:\\Bautista Bozzer\\Desktop\\Educación\\#UADE\\Segundo Año\\2C2022\\Jue - Paradigma orientado a objetos\\TPs\\TPO-POO-2C-22";
+        String dir = "E:\\UADE\\Segundo cuatrimestre 2022\\Paradigma orientado a objetos\\Trabajo practico";
         return  new File(dir+name+".json").getPath();
     }
 
