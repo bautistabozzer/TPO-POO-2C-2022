@@ -64,14 +64,14 @@ class CreateLoginForm extends JFrame implements ActionListener
         if (userValue.equals("test1@gmail.com") && passValue.equals("test")) {  //si es auténtico, lleva al usuario a una nueva página
 
             //crear instancia de NewPage
-            NewPage page = new NewPage();
+            MenuLogin win= new MenuLogin();
 
             //hacer que la página sea visible para el usuario
-            page.setVisible(true);
+            win.setVisible(true);
 
             //crea una etiqueta de bienvenida y configúrala en la nueva página
-            JLabel wel_label = new JLabel("Welcome: "+userValue);
-            page.getContentPane().add(wel_label);
+            //JLabel wel_label = new JLabel("Welcome: "+userValue);
+            //win.getContentPane().add(wel_label);
         }
         else{
             //mostrar mensaje de error
@@ -97,6 +97,8 @@ public class LoginFormDemo {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }
+
+
 
 
 }
