@@ -6,6 +6,7 @@ import uade.edu.ar.controller.ControllerPeticion;
 import uade.edu.ar.dto.PeticionDto;
 import uade.edu.ar.model.Peticion;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +34,7 @@ public class ControllerTestPeticion {
         practicasAsociadas.add("Analisis de orina");
         //practicasAsociadas.toArray();
 
-        Peticion peticion = new Peticion("165474874651", pacienteId, practicasAsociadas );
+        Peticion peticion = new Peticion("123456", pacienteId, practicasAsociadas );
         controllerPeticion.addPeticion(controllerPeticion.toDto(peticion));
     }
 
@@ -49,7 +50,6 @@ public class ControllerTestPeticion {
     }
 
     @Test
-    void deleteBypeticionIdPeticion(String pacienteId) {
-
+    void deleteBypeticionIdPeticion() {
     }
 }

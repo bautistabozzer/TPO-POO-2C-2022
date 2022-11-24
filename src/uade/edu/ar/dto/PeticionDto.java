@@ -1,6 +1,7 @@
 package uade.edu.ar.dto;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class PeticionDto {
@@ -10,8 +11,8 @@ public class PeticionDto {
 
     private String obraSocialPeticion;
 
-    private LocalDate fechaCreacionPeticion;
-    private LocalDate fechaEntregaPeticion;
+    private String fechaCreacionPeticion;
+    private String fechaEntregaPeticion;
     private List<String> practicasAsociadasPeticion;
     private int cantPracticasPeticion;
 
@@ -20,8 +21,8 @@ public class PeticionDto {
         this.pacienteIdPeticion = pacienteIdPeticion;
         this.practicasAsociadasPeticion = practicasAsociadasPeticion;
         this.cantPracticasPeticion = practicasAsociadasPeticion.size(); //Este tamaño esta definido por las practicas asociadas.
-        this.fechaCreacionPeticion = LocalDate.now();
-        this.fechaEntregaPeticion= setFechaEntregaPeticion(fechaCreacionPeticion);
+        this.fechaCreacionPeticion = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));;
+        this.fechaEntregaPeticion= setFechaEntregaPeticion();
         this.obraSocialPeticion = "NoAsignado";
     }
 
@@ -53,12 +54,17 @@ public class PeticionDto {
         this.obraSocialPeticion = obraSocialPeticion;
     }
 
-    public LocalDate getFechaEntregaPeticion() {
+    public String getFechaEntregaPeticion() {
         return fechaEntregaPeticion;
     }
 
-    public LocalDate setFechaEntregaPeticion(LocalDate fechaCreacionPeticion) {
-        return fechaEntregaPeticion = fechaCreacionPeticion.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
+    public String setFechaEntregaPeticion() {
+        LocalDate fechaCreacionPeticion = LocalDate.now();
+        fechaCreacionPeticion.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
+        String fechaEntregaPeticion= fechaCreacionPeticion.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        return fechaEntregaPeticion;
+
+
     }
 
     public List<String> getPracticasAsociadasPeticion() {
