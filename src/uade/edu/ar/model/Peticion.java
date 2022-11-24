@@ -1,6 +1,7 @@
 package uade.edu.ar.model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class Peticion {
@@ -11,8 +12,8 @@ public class Peticion {
 
     private String obraSocial;
 
-    private LocalDate fechaCreacion;
-    private LocalDate fechaEntrega;
+    private String fechaCreacion;
+    private String fechaEntrega;
     private List<String> practicasAsociadas;
 
     private int cantPracticas;
@@ -22,8 +23,8 @@ public class Peticion {
         this.pacienteId = pacienteId;
         this.practicasAsociadas = practicasAsociadas;
         this.cantPracticas = practicasAsociadas.size(); //Este tamaño esta definido por las practicas asociadas.
-        this.fechaCreacion = LocalDate.now();
-        this.fechaEntrega = setFechaEntrega(fechaCreacion);
+        this.fechaCreacion = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        this.fechaEntrega = setFechaEntrega();
         this.obraSocial = "NoAsignado";
     }
 
@@ -56,12 +57,15 @@ public class Peticion {
         this.obraSocial = obraSocial;
     }
 
-    public LocalDate getFechaEntrega() {
+    public String getFechaEntrega() {
         return fechaEntrega;
     }
 
-    public LocalDate setFechaEntrega(LocalDate fechaCreacion) {
-        return fechaEntrega = fechaCreacion.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
+    public String setFechaEntrega() {
+        LocalDate fechaCreacion = LocalDate.now();
+        fechaCreacion.plusDays(8); //Esto hace que la fecha de entrega se fije 8 dias luego de solicitarla.
+        String fechaEntrega= fechaCreacion.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        return fechaEntrega;
     }
 
 
