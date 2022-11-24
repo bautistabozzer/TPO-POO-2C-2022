@@ -1,12 +1,11 @@
 package uade.edu.ar.ui.vistas;
-import javax.swing.*;
-import java.awt.*;
-import javax.swing.*;
-import java.util.Collection;
+//importar clases y paquetes requeridos
 
+import javax.swing.*;
+//crear la clase NewPage para crear una nueva página en la que navegará el usuario
 public class NewPage extends JFrame{
-    //import required classes and packages
-//constructor
+    //constructor
+
     NewPage()
     {
         setDefaultCloseOperation(javax.swing.
