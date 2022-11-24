@@ -27,7 +27,7 @@ class CreateLoginForm extends JFrame implements ActionListener
         userLabel.setText("Username");      //establecer el valor de la etiqueta para textField1
 
         //crear campo de texto para obtener el nombre de usuario del usuario
-        textField1 = new JTextField(15);    //establecer la longitud del texto
+        textField1 = new JTextField(15);    //establecer la longitud del texto![](C:/Users/tomas/AppData/Local/Temp/download.jpg)
 
         //crear etiqueta para contraseña
         passLabel = new JLabel();
