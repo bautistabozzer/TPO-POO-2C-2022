@@ -1,6 +1,5 @@
 package uade.edu.ar.controller;
 
-import org.junit.jupiter.api.Test;
 import uade.edu.ar.dao.PeticionDao;
 import uade.edu.ar.dto.PeticionDto;
 import uade.edu.ar.model.Peticion;
@@ -73,7 +72,7 @@ public class ControllerPeticion {
     }
 
     private static String getPathOutPeticion(String name){
-        String dir = "D:\\Bautista Bozzer\\Desktop\\Educación\\#UADE\\Segundo Año\\2C2022\\Jue - Paradigma orientado a objetos\\TPs\\";
+        String dir = "E:\\UADE\\Segundo cuatrimestre 2022\\Paradigma orientado a objetos\\Trabajo practico";
         return  new File(dir+name+".json").getPath();
     }
 

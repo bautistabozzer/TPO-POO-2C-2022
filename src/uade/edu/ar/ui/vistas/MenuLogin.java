@@ -1,5 +1,6 @@
 package uade.edu.ar.ui.vistas;
 
+import uade.edu.ar.controller.ControllerPaciente;
 import uade.edu.ar.ui.table.TablePacientes;
 
 import javax.swing.*;
@@ -14,6 +15,7 @@ public class MenuLogin extends JFrame {
     private JButton agregarPacienteButton;
     private JButton verDatosButton;
     private JDesktopPane desktopPaneEmbebido;
+    private JButton EliminarPaciente;
 
     public MenuLogin()
     {
@@ -44,6 +46,19 @@ public class MenuLogin extends JFrame {
                 }
                 desktopPaneEmbebido.add(pantalla);
                 pantalla.setVisible(true);
+
+            }
+        });
+        EliminarPaciente.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                try {
+                    ControllerPaciente controller=  ControllerPaciente.getInstances();
+                    controller.deleteBydniPaciente();
+                } catch (Exception ex) {
+                    throw new RuntimeException(ex);
+                }
 
             }
         });

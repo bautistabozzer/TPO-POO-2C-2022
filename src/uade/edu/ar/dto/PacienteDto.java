@@ -22,9 +22,9 @@ public class PacienteDto {
         this.dniPaciente = dniPaciente;
         this.nombrePaciente = nombrePaciente;
         this.sexoPaciente = sexoPaciente;
-        this.domicilioPaciente = "NOAsignado";
+        this.domicilioPaciente = domicilioPaciente;
         this.fechaNacimientoPaciente = fechaNacimiento;
-        this.emailPaciente ="NOAsignado";
+        this.emailPaciente = emailPaciente;
 
     }
 

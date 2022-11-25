@@ -4,13 +4,9 @@ package uade.edu.ar.test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import uade.edu.ar.controller.ControllerPaciente;
-import uade.edu.ar.controller.ControllerPeticion;
 import uade.edu.ar.dto.PacienteDto;
-import uade.edu.ar.dto.PeticionDto;
 import uade.edu.ar.model.Paciente;
-import uade.edu.ar.model.Peticion;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -34,7 +30,7 @@ public class ControllerTestPaciente {
     @Test
     void addPaciente() throws Exception {
 
-        Paciente paciente= new Paciente("1498743", "Adrian", 'M');
+        Paciente paciente= new Paciente("1498743", "Adrian", 'M',"domicilio", "20201002","prueba@email.com");
         //paciente.setFechaNacimiento(9,7,7);
         controllerPaciente.addPaciente(controllerPaciente.toDto(paciente));
 
