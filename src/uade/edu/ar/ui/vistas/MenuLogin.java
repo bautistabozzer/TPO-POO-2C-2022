@@ -1,6 +1,8 @@
 package uade.edu.ar.ui.vistas;
 
 import uade.edu.ar.controller.ControllerPaciente;
+import uade.edu.ar.controller.ControllerPeticion;
+import uade.edu.ar.controller.ControllerSucursal;
 import uade.edu.ar.ui.table.TablePacientes;
 
 import javax.swing.*;
@@ -51,14 +53,10 @@ public class MenuLogin extends JFrame {
         });
         EliminarPaciente.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
-
-                try {
-                    ControllerPaciente controller=  ControllerPaciente.getInstances();
-                    controller.deleteBydniPaciente();
-                } catch (Exception ex) {
-                    throw new RuntimeException(ex);
-                }
+             public void actionPerformed(ActionEvent e) {
+                FormEliminarPaciente pantalla = new FormEliminarPaciente();
+                desktopPaneEmbebido.add(pantalla);
+                pantalla.setVisible(true);
 
             }
         });
@@ -77,4 +75,17 @@ public class MenuLogin extends JFrame {
     private void createUIComponents() {
         // TODO: place custom component creation code here
     }
+    @Override
+    public void dispose(){
+        try {
+            ControllerPaciente.getInstances().close();
+            ControllerPeticion.getInstances().close();
+            ControllerSucursal.getInstances().close();
+        } catch (Exception e){
+            throw new RuntimeException(e);
+        }
+        super.dispose();
+    }
+
+
 }

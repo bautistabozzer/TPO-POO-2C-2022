@@ -81,5 +81,8 @@ public class Controller {
     public static ModelDto toDto(Model model){
         return new ModelDto(model.getId(),model.getName());
     }
+    public void close() throws Exception{
+        modelDao.saveAll(modelList);
 
-}
+}}
+

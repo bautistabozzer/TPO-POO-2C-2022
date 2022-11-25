@@ -83,4 +83,7 @@ public class ControllerPeticion {
     public static PeticionDto toDto(Peticion peticion){
         return new PeticionDto(peticion.getPeticionId(),peticion.getPacienteId(), peticion.getPracticasAsociadas());
     }
+    public void close() throws Exception {
+        peticionDao.saveAll(peticionList);
+    }
 }

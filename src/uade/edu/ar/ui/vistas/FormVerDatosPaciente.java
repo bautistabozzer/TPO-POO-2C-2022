@@ -13,6 +13,7 @@ public class FormVerDatosPaciente extends JInternalFrame {
         super("datos");
         setBorder(null);
         ((javax.swing.plaf.basic.BasicInternalFrameUI)this.getUI()).setNorthPane(null);
+
         setContentPane(panelPrincipalDatos);
     }
  }
