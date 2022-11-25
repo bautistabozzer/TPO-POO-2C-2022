@@ -80,5 +80,8 @@ public class ControllerSucursal {
     public static SucursalDto toDto(Sucursal sucursal){
         return new SucursalDto(sucursal.getSucursalId(), sucursal.getDireccion(), sucursal.getResponsableTecnico());
     }
+    public void close() throws Exception{
+        sucursalDao.saveAll(sucursalList);
 
+    }
 }

@@ -49,8 +49,9 @@ public class ControllerTestPaciente {
     }
 
     @Test
-    void deleteBydniPaciente() {
-        controllerPaciente.deleteBydniPaciente("117478");
+    void deleteByidPaciente() throws Exception {
+        controllerPaciente.deleteBydniPaciente("");
+        controllerPaciente.close();
     }
 
 
