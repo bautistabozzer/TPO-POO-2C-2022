@@ -1,8 +1,6 @@
 package uade.edu.ar.ui.table;
 
-import uade.edu.ar.controller.Controller;
 import uade.edu.ar.controller.ControllerPaciente;
-import uade.edu.ar.dto.ModelDto;
 import uade.edu.ar.dto.PacienteDto;
 
 import javax.swing.*;
@@ -54,6 +52,9 @@ public class TablePacientes extends JInternalFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
 
     }
+
+
+
     public void main(String[] args) throws Exception {
         TablePacientes myApp = new TablePacientes("Table Paciente");
         myApp.setVisible(true);

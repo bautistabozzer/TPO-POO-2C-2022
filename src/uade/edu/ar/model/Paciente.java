@@ -17,13 +17,13 @@ public class Paciente {
     private String fechaNacimiento;
 
 
-    public Paciente(String dni, String nombre, Character sexo) {
+    public Paciente(String dni, String nombre, Character sexo, String domicilio, String fechaNacimiento, String email) {
         this.dni = dni;
         this.nombre = nombre;
         this.sexo = sexo;
-        this.domicilio = "NOAsignado";
-        this.fechaNacimiento = "NoAsignado";
-        this.email = "NOAsignado";
+        this.domicilio = domicilio;
+        this.fechaNacimiento = fechaNacimiento;
+        this.email = email;
     }
 
     public String getDni() {
