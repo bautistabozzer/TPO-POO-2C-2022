@@ -40,7 +40,7 @@ public class FormEliminarPaciente extends JInternalFrame {
                 }
                 try {
                 controllerPaciente.deleteBydniPaciente(String.valueOf(pacienteDni));
-                    controllerPaciente.close();
+                controllerPaciente.close();
 
                 } catch (Exception ex) {
                     throw new RuntimeException(ex);

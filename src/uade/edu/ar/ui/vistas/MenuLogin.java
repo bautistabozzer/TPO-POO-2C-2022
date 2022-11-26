@@ -55,6 +55,7 @@ public class MenuLogin extends JFrame {
             @Override
              public void actionPerformed(ActionEvent e) {
                 FormEliminarPaciente pantalla = new FormEliminarPaciente();
+
                 desktopPaneEmbebido.add(pantalla);
                 pantalla.setVisible(true);
 
