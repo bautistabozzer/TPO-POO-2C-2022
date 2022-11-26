@@ -21,9 +21,9 @@ public class Paciente {
         this.dni = dni;
         this.nombre = nombre;
         this.sexo = sexo;
-        this.domicilio = "NOAsignado";
-        this.fechaNacimiento = "NoAsignado";
-        this.email = "NOAsignado";
+        this.domicilio = domicilioPaciente;
+        this.fechaNacimiento = fechaNacimientoPaciente;
+        this.email = emailPaciente;
     }
 
     public String getDni() {

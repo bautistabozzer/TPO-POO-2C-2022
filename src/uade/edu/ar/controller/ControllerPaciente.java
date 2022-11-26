@@ -24,6 +24,7 @@ public class ControllerPaciente {
             CONTROLLER = new ControllerPaciente();
             pacienteDao = new PacienteDao(Paciente.class, getPathOutPaciente(Paciente.class.getSimpleName()));
             pacienteList = pacienteDao.getAll(Paciente.class);
+
         }
         return CONTROLLER;
     }

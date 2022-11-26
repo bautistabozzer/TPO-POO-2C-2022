@@ -50,7 +50,7 @@ public class ControllerTestPaciente {
 
     @Test
     void deleteByidPaciente() throws Exception {
-        controllerPaciente.deleteBydniPaciente("");
+        controllerPaciente.deleteBydniPaciente("123456");
         controllerPaciente.close();
     }
 
