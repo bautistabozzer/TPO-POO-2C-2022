@@ -20,7 +20,7 @@
         <border type="etched"/>
         <children>
           <component id="debeb" class="javax.swing.JButton" binding="EliminarPaciente">
-            <constraints border-constraint="North"/>
+            <constraints border-constraint="Last"/>
             <properties>
               <text value="EliminarPaciente"/>
             </properties>
@@ -28,11 +28,13 @@
           <component id="34388" class="javax.swing.JButton" binding="verDatosButton" default-binding="true">
             <constraints border-constraint="Center"/>
             <properties>
+              <horizontalTextPosition value="11"/>
+              <maximumSize width="20" height="24"/>
               <text value="Ver Datos"/>
             </properties>
           </component>
           <component id="52ba5" class="javax.swing.JButton" binding="agregarPacienteButton" default-binding="true">
-            <constraints border-constraint="South"/>
+            <constraints border-constraint="First"/>
             <properties>
               <text value="Agregar Paciente"/>
             </properties>
@@ -69,7 +71,7 @@
           <grid id="fdccf" class="javax.swing.JDesktopPane" binding="desktopPaneEmbebido" layout-manager="CardLayout" hgap="0" vgap="0">
             <constraints border-constraint="Center"/>
             <properties/>
-            <border type="none"/>
+            <border type="none" title="c"/>
             <children/>
           </grid>
         </children>
